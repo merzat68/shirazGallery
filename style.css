@@ -137,7 +137,7 @@ table {
 /* ---------------------------------------------Settings--------------------------------------------- */
 @font-face {
   font-family: "iranSans";
-  src: url("./Fonts/Iran-sans.woff") format("woff"),
+  src: url("./build/fonts/Iran-sans.woff") format("woff"),
     url("./Fonts/Iran-sans.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -153,18 +153,6 @@ body.main__style--all {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-body.main__style--profile {
-  background-color: #efefef !important;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.mt-6 {
-  margin-top: 5rem;
-}
-.my-6 {
-  margin: 5rem 0;
 }
 .website__container {
   height: 100vh;

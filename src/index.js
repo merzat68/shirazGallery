@@ -4,6 +4,8 @@ import "../node_modules/bootstrap/scss/bootstrap.scss";
 // Import our custom CSS
 import "./css/main.scss";
 import "../style.css";
+import "./css/miscellaneous.scss";
+import "./css/sizes.scss";
 
 // Import all of Bootstrap's JS
 import * as bootstrap from "bootstrap";

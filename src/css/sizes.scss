@@ -1,0 +1,23 @@
+$margins: x, y, r, l, b, t;
+
+@each $margin in $margins {
+  @for $size from 6 through 20 {
+    .m#{$margin}-#{$size} {
+      @if $margin == x {
+        margin-left: ($size * 1rem)-2;
+        margin-right: ($size * 1rem)-2;
+      } @else if $margin == y {
+        margin-top: ($size * 1rem)-2;
+        margin-bottom: ($size * 1rem)-2;
+      } @else if $margin == t {
+        margin-top: ($size * 1rem)-2;
+      } @else if $margin == r {
+        margin-right: ($size * 1rem)-2;
+      } @else if $margin == l {
+        margin-left: ($size * 1rem)-2;
+      } @else if $margin == b {
+        margin-bottom: ($size * 1rem)-2;
+      }
+    }
+  }
+}
