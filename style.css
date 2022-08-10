@@ -147,6 +147,7 @@ html {
 }
 body.main__style--all {
   font-family: "iranSans";
+  overflow-x: hidden;
   background-color: #efefef !important;
   height: 100vh;
   display: flex;

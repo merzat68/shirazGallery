@@ -1,23 +1,23 @@
 <?php
 include get_template_directory() . '/jdf.php';
-include get_template_directory() . '/inc/search-route.php';
+//include get_template_directory() . '/inc/search-route.php';
 
-function shaabani_files()
+function shiraz_files()
 {
     wp_enqueue_style('font-awesome', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
-    wp_enqueue_style('shaabani_main_style', get_theme_file_uri('./build/style-index.css'));
-    wp_enqueue_style('shaabani_main_extra_style', get_theme_file_uri('./build/index.css'));
-    wp_enqueue_script('main-shaabani-js', get_theme_file_uri('./build/index.js'), NULL, '1.0', true);
+    wp_enqueue_style('shiraz_main_style', get_theme_file_uri('./build/style-index.css'));
+    wp_enqueue_style('shiraz_main_extra_style', get_theme_file_uri('./build/index.css'));
+    wp_enqueue_script('main-shiraz-js', get_theme_file_uri('./build/index.js'), NULL, '1.0', true);
 
-    wp_localize_script('main-shaabani-js', 'shabaaniData', array(
+    wp_localize_script('main-shiraz-js', 'shirazData', array(
         'root_url' => get_site_url(),
         'nonce' => wp_create_nonce('wp_rest')
     ));
 }
 
-add_action('wp_enqueue_scripts', 'shaabani_files');
+add_action('wp_enqueue_scripts', 'shiraz_files');
 
-function shaabani_features()
+function shiraz_features()
 {
     register_nav_menu('headerMenu', 'Header Menu');
     add_theme_support('title-tag');
@@ -26,9 +26,9 @@ function shaabani_features()
     add_image_size('smallImage', 150, 150, false);
 }
 
-add_action('after_setup_theme', 'shaabani_features');
+add_action('after_setup_theme', 'shiraz_features');
 
-function shabaani_adjust_queries($query)
+function shiraz_adjust_queries($query)
 {
     if (!is_admin() && is_post_type_archive('program') && $query->is_main_query()) {
         $query->set('orderby', 'title');
@@ -54,7 +54,7 @@ function shabaani_adjust_queries($query)
     }
 }
 
-add_action('pre_get_posts', 'shabaani_adjust_queries');
+add_action('pre_get_posts', 'shiraz_adjust_queries');
 
 
 add_action('admin_init', 'redirectSubsToFrontend');
@@ -78,37 +78,4 @@ function noSubsAdminBar()
     if (count($ourCurrentUser->roles) == 1 && $ourCurrentUser->roles[0] == 'subscriber') {
         show_admin_bar(false);
     }
-}
-
-// Customize Login Screen
-add_filter('login_headerurl', 'headerUrl');
-
-function headerUrl()
-{
-    return esc_url(site_url('/'));
-}
-
-add_action('login_enqueue_scripts', 'loginCSS');
-
-function loginCSS()
-{
-    wp_enqueue_style('font-awesome', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
-    wp_enqueue_style('shaabani_main_style', get_theme_file_uri('./build/style-index.css'));
-    wp_enqueue_style('shaabani_main_extra_style', get_theme_file_uri('./build/index.css'));
-    wp_enqueue_script('main-shaabani-js', get_theme_file_uri('./build/index.js'), NULL, '1.0', true);
-}
-
-add_filter('login_headertext', 'loginTitle');
-
-function loginTitle()
-{
-    return get_bloginfo('name');
-}
-
-add_filter('ai1wm_exclude_content_from_export', 'ignoreFiles');
-
-function ignoreFiles($exclude_filters)
-{
-    $exclude_filters[] = 'themes/Shaabani/node_modules';
-    return $exclude_filters;
 }

@@ -30,7 +30,7 @@
     z-index: 1;
   }
   .caption {
-    height: 36.4rem;
+    height: 38.4rem;
     background: linear-gradient(
       142.76deg,
       rgba(176, 67, 135, 0.8) 17.88%,
@@ -148,7 +148,7 @@
     width: calc(28 / 16) * 1rem;
     height: calc(5 / 16) * 1rem;
     left: calc(1203 / 16) * 1rem;
-    top: calc(780 / 16) * 1rem;
+    top: calc(760 / 16) * 1rem;
     margin-top: -6rem;
     background: rgba(65, 60, 126, 0.35);
     border-radius: calc(100 / 16) * 1rem;
@@ -158,9 +158,29 @@
 .goals__programs {
   .block {
     position: absolute;
-    width: 9rem;
-    height: 9rem;
+    width: calc(237 / 16) * 1rem;
+    height: calc(215 / 16) * 1rem;
     left: 0;
+    box-shadow: 0px 4px 10px rgba(211, 211, 211, 0.18);
+    border-radius: 16px;
+    background: #ffffff;
+    transition: background 0.5s ease;
+    &:hover {
+      background: linear-gradient(
+        116.13deg,
+        rgba(176, 67, 135, 0.8) 9.35%,
+        rgba(65, 60, 126, 0.92) 118.21%
+      );
+      box-shadow: 0px 8px 20px rgba(84, 79, 143, 0.25);
+      border-radius: 16px;
+    }
+  }
+  .block__down {
+    position: absolute;
+    width: calc(237 / 16) * 1rem;
+    height: calc(215 / 16) * 1rem;
+    left: 17rem;
+    top: 7rem;
     box-shadow: 0px 4px 10px rgba(211, 211, 211, 0.18);
     border-radius: 16px;
     background: #ffffff;
@@ -178,5 +198,30 @@
   .underline {
     border-bottom: 0.1rem solid;
     width: 3rem;
+  }
+}
+
+.background__rectangle {
+  &--big {
+    position: absolute;
+    width: calc(380.8 / 16) * 1rem;
+    height: calc(380.8 / 16) * 1rem;
+    left: -15rem;
+    top: 77rem;
+    background: linear-gradient(146.37deg, #b482b5 14.33%, #9c9bc2 80.03%);
+    opacity: 0.35;
+    border-radius: 32px;
+    transform: rotate(42.94deg);
+  }
+  &--small {
+    position: absolute;
+    width: calc(272.31 / 16) * 1rem;
+    height: calc(272.31 / 16) * 1rem;
+    left: -9rem;
+    top: 68rem;
+    background: linear-gradient(131.52deg, #e8b7cd 11.11%, #b482b5 91.74%);
+    opacity: 0.35;
+    border-radius: calc(32 / 16) * 1rem;
+    transform: rotate(134.17deg);
   }
 }

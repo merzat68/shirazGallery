@@ -62,20 +62,40 @@ get_header();
         wp_reset_postdata();
         ?>
     </section>
-
+    <!-------------------------------- Programs and Events Section -------------------------------->
     <section class="container-fluid my-5 px-0">
-        <div class="d-flex justify-content-center goals__programs">
-            <div class="mx-5 position-relative">
+        <div class="row goals__programs">
+            <div class="col mx-5 position-relative">
                 <div class="block">
                 </div>
+                <div class="block__down">
+                </div>
             </div>
-
-            <div class="d-flex flex-column mx-5">
+            <div class="col mx-5">
                 <h6>test</h6>
                 <div class="underline"></div>
+                <p class="mt-4">ﺪﻧراد ار ﺎﻤﻨﯿﺳ یﺎﯿﻧد ﻪﺑ دورو یوزرآ ﻪﮐ ﺪﯾا‌هﺪﯾد نﺎﺘﻓاﺮﻃا رد ار یداﺮﻓا ﻢﻫ ﺎﻤﺷ ًﺎﻟﺎﻤﺘﺣا
+                    ﻪﭼﺮﮔا ﻪﮐ ﺪﻨﺘﺴﻫ ﺰﯿﻧ یداﺮﻓا ،ﻦﯿﺑ ﻦﯾا رد ﺎﻣا ؛ﺪﻨﺳر‌ﯽﻤﻧ دﻮﺧ یوزرآ ﻦﯾا ﻪﺑ هﺎﮔ‌ﭻﯿﻫ ﺎﻣا
+                    ‌ﺲﭘ رد ﮏﭼﻮﮐ یﺎﻫﺮﯿﺴﻣ ﺮﯿﯿﻐﺗ ﺎﺑ ﺎﻣا ﺪﻧﻮﺷ‌ﯽﻤﻧ زﺎﺳ‌لﻮﭘ ﺖﻌﻨﺻ ﻦﯾا رد رﻮﻀﺣ ﻪﺑ ﻖﻓﻮﻣ
+                    .ﺪﻨﺳر‌ﯽﻣ ﺖﯿﻘﻓﻮﻣ ﻪﺑ و هدﺮﮐ ﺖﻓﺮﺸﯿﭘ ،ﻞﻏﺎﺸﻣ ﻦﯾا ی‌ﻪﻨﯿﻣز
+                    ﺪﻧراد ار ﺎﻤﻨﯿﺳ یﺎﯿﻧد ﻪﺑ دورو یوزرآ ﻪﮐ ﺪﯾا‌هﺪﯾد نﺎﺘﻓاﺮﻃا رد ار یداﺮﻓا ﻢﻫ ﺎﻤﺷ ًﺎﻟﺎﻤﺘﺣا
+                    ﻪﭼﺮﮔا ﻪﮐ ﺪﻨﺘﺴﻫ ﺰﯿﻧ یداﺮﻓا ،ﻦﯿﺑ ﻦﯾا رد ﺎﻣا ؛ﺪﻨﺳر‌ﯽﻤﻧ دﻮﺧ یوزرآ ﻦﯾا ﻪﺑ هﺎﮔ‌ﭻﯿﻫ ﺎﻣا
+                    ‌ﺲﭘ رد ﮏﭼﻮﮐ یﺎﻫﺮﯿﺴﻣ ﺮﯿﯿﻐﺗ ﺎﺑ ﺎﻣا ﺪﻧﻮﺷ‌ﯽﻤﻧ زﺎﺳ‌لﻮﭘ ﺖﻌﻨﺻ ﻦﯾا رد رﻮﻀﺣ ﻪﺑ ﻖﻓﻮﻣ
+                    .ﺪﻨﺳر‌ﯽﻣ ﺖﯿﻘﻓﻮﻣ ﻪﺑ و هدﺮﮐ ﺖﻓﺮﺸﯿﭘ ،ﻞﻏﺎﺸﻣ ﻦﯾا ی‌ﻪﻨﯿﻣز </p>
             </div>
         </div>
     </section>
+    <!-------------------------------- Shiraz Talent Section -------------------------------->
+    <section class="container-fluid my-5 px-0">
+
+    </section>
+</div>
+
+<div class="background__rectangle">
+    <div class="background__rectangle--small">
+    </div>
+    <div class="background__rectangle--big">
+    </div>
 </div>
 
 <?php
