@@ -1,0 +1,25 @@
+{
+  "name": "shaabani",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MerzaT",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@glidejs/glide": "^3.4.1",
+    "@popperjs/core": "^2.11.5",
+    "@wordpress/scripts": "*",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.2.0",
+    "bootstrap-icons": "^1.9.1",
+    "normalize.css": "^8.0.1"
+  }
+}
