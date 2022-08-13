@@ -137,7 +137,7 @@ table {
 /* ---------------------------------------------Settings--------------------------------------------- */
 @font-face {
   font-family: "iranSans";
-  src: url("./build/fonts/Iran-sans.woff") format("woff"),
+  src: url("./Fonts/Iran-sans.woff") format("woff"),
     url("./Fonts/Iran-sans.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -146,10 +146,10 @@ html {
   direction: rtl;
 }
 body.main__style--all {
+  position: relative;
   font-family: "iranSans";
   overflow-x: hidden;
   background-color: #efefef !important;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -159,19 +159,4 @@ body.main__style--all {
 }
 .container-fluid {
   padding: 0;
-}
-/* ---------------------------------------------pagination styles--------------------------------------------- */
-.page-numbers {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 0 2px 0 0;
-  border: 1px solid #eee;
-  line-height: 1;
-  text-decoration: none;
-  border-radius: 2px;
-  font-weight: 600;
-}
-.page-numbers.current,
-a.page-numbers:hover {
-  background: #f9f9f9;
 }

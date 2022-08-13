@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<div class="container-fluid section__style px-0 m-0">
+<div class="section__style px-0 m-0">
     <!-------------------------------- Slider Section -------------------------------->
     <section class="d-flex flex-column m-0 overflow-hidden slider__section">
         <?php
@@ -61,7 +61,7 @@ get_header();
         ?>
     </section>
     <!-------------------------------- Programs and Events Section -------------------------------->
-    <section class="container-fluid px-5 my-9">
+    <section class="container px-5 my-9">
         <div class="row goals__programs">
             <div class="col position-relative justify-content-between ms-3 mr-10">
                 <div class="row">
@@ -99,9 +99,15 @@ get_header();
                     .ﺪﻨﺳر‌ﯽﻣ ﺖﯿﻘﻓﻮﻣ ﻪﺑ و هدﺮﮐ ﺖﻓﺮﺸﯿﭘ ،ﻞﻏﺎﺸﻣ ﻦﯾا ی‌ﻪﻨﯿﻣز </p>
             </div>
         </div>
+        <div class="background__rectangle">
+            <div class="background__rectangle--small">
+            </div>
+            <div class="background__rectangle--big">
+            </div>
+        </div>
     </section>
     <!-------------------------------- Shiraz Talent Section -------------------------------->
-    <section class="container-fluid px-5 pt-5 mt-19 shiraz__talent--section">
+    <section class="container px-5 pt-5 mt-19 shiraz__talent--section">
         <div class="row">
             <div class="col mr-10 ms-3">
                 <div class="bg__talent"></div>
@@ -123,47 +129,346 @@ get_header();
         </div>
     </section>
     <!-------------------------------- Past Courses Section -------------------------------->
-    <section class="container-fluid px-5 py-5 mt-19 pastCourse__section">
-        <div class="mx-10 d-flex justify-content-between">
-            <h6 class="text__underline">test</h6>
-            <a class="pastCourse__button text-white text-decoration-none px-3 py-2" href="">مشاهده همه</a>
-        </div>
-        <div class="row d-flex justify-content-between mx-10 mt-5">
-            <div class="col px-0">
-                <div class="row pastCourse__content">
-                    <div class="col-4 p-0">
-                        <div class="pastCourse__image">
-                            <img src="<?php echo get_theme_file_uri('Images/The Hybrid Work Model 3.jpg') ?>" alt="">
-                        </div>
+    <section class="px-5 py-5 mt-10 pastCourse">
+        <div class="row d-flex justify-content-center pastCourse__header align-items-center mb-5">
+            <div class="col-2">
 
+            </div>
+            <div class="col-8 d-flex justify-content-between p-0">
+                <h6 class="text__underline">test</h6>
+                <a class="text-white text-decoration-none px-3 py-2" href="">مشاهده همه</a>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <div class="pastCourse__navigator--right">
+                    <a href=""><img src="<?php echo get_theme_file_uri('./Images/navigator2.png') ?>" alt=""></a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row justify-content-between gx-5">
+                    <div class="col-6">
+                        <div class="row pastCourse__items">
+                            <div class="col-5 p-0">
+                                <div class="pastCourse__items--images">
+                                    <img src="<?php echo get_theme_file_uri('Images/The Hybrid Work Model 3.jpg') ?>" alt="">
+                                </div>
+                            </div>
+                            <div class="col-7 p-2">
+                                <div class="pastCourse__items--title">
+                                    <h6>title</h6>
+                                </div>
+                                <div class="pastCourse__items--text">
+                                    <p>the code is correct and good
+                                        you must debug it after complete it
+                                    </p>
+                                </div>
+                                <div class="pastCourse__items--details">
+                                    <i class=""></i>
+                                    <p>salam</p>
+                                    <i class=""></i>
+                                    <p>salam</p>
+                                </div>
+                                <a class="pastCourse__items--button text-decoration-none px-3 py-2" href="">detalis</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-8">
-                        asdasd
+                    <div class="col-6">
+                        <div class="row pastCourse__items">
+                            <div class="col-5 p-0">
+                                <div class="pastCourse__items--images">
+                                    <img src="<?php echo get_theme_file_uri('Images/The Hybrid Work Model 3.jpg') ?>" alt="">
+                                </div>
+                            </div>
+                            <div class="col-7 p-2">
+                                <div class="pastCourse__items--title">
+                                    <h6>title</h6>
+                                </div>
+                                <div class="pastCourse__items--text">
+                                    <p>the code is correct and good
+                                        you must debug it after complete it
+                                    </p>
+                                </div>
+                                <div class="pastCourse__items--details">
+                                    <i class=""></i>
+                                    <p>salam</p>
+                                    <i class=""></i>
+                                    <p>salam</p>
+                                </div>
+                                <a class="pastCourse__items--button text-decoration-none px-3 py-2" href="">detalis</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col px-0 me-5">
-                <div class="row pastCourse__content">
-                    <div class="col-4 p-0">
-                        <div class="pastCourse__image">
-                            <img src="<?php echo get_theme_file_uri('Images/The Hybrid Work Model 3.jpg') ?>" alt="">
-                        </div>
-
-                    </div>
-                    <div class="col-8">
-                        asdasd
-                    </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <div class="pastCourse__navigator--left">
+                    <a href=""><img src="<?php echo get_theme_file_uri('./Images/navigator2.png') ?>" alt=""></a>
                 </div>
             </div>
         </div>
     </section>
-</div>
 
-<div class="background__rectangle">
-    <div class="background__rectangle--small">
-    </div>
-    <div class="background__rectangle--big">
-    </div>
+    <section class="pt-5">
+        <div class="incomingEvent__bg">
+        </div>
+    </section>
+    <!-------------------------------- Upcoming Events Section -------------------------------->
+    <section class="py-5 px-5 upcomingEvent">
+        <div class="row d-flex justify-content-center upcomingEvent__header align-items-center mb-5">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8 d-flex justify-content-between p-0">
+                <h6 class="text__underline">test</h6>
+                <a class="text-white text-decoration-none px-3 py-2" href="">مشاهده همه</a>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between mt-5">
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <div class="upcomingEvent__navigator--right">
+                    <a href=""><img src="<?php echo get_theme_file_uri('./Images/navigator2.png') ?>" alt=""></a>
+                </div>
+            </div>
+            <div class="col-8 p-0">
+                <div class="row justify-content-between gx-2">
+                    <div class="col upcomingEvent__items mx-2">
+                        <div class="upcomingEvent__items--container">
+                            <div class="upcomingEvent__items--container--skew">
+                                <div class="upcomingEvent__items--container--images">
+                                    <img src="<?php echo get_theme_file_uri('Images/unsplash_cEbHMacdrBg.jpg') ?>" alt="">
+                                </div>
+                                <a href="">بزودی</a>
+                            </div>
+                        </div>
+                        <div class="upcomingEvent__items--content">
+                            <div class="upcomingEvent__items--content--title">
+                                <h6>title</h6>
+                            </div>
+                            <div class="upcomingEvent__items--content--text">
+                                <p>the code is correct and good
+                                    you must debug it after complete it
+                                </p>
+                            </div>
+                            <div class="upcomingEvent__items--content--details">
+                                <i class=""></i>
+                                <p>salam</p>
+                                <i class=""></i>
+                                <p>salam</p>
+                            </div>
+                        </div>
+                        <a class="upcomingEvent__items--button text-decoration-none px-3 py-2" href="">detalis</a>
+                    </div>
+                    <div class="col upcomingEvent__items mx-2">
+                        <div class="upcomingEvent__items--container">
+                            <div class="upcomingEvent__items--container--skew">
+                                <div class="upcomingEvent__items--container--images">
+                                    <img src="<?php echo get_theme_file_uri('Images/unsplash_cEbHMacdrBg.jpg') ?>" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="upcomingEvent__items--content">
+                            <div class="upcomingEvent__items--title">
+                                <h6>title</h6>
+                            </div>
+                            <div class="upcomingEvent__items--text">
+                                <p>the code is correct and good
+                                    you must debug it after complete it
+                                </p>
+                            </div>
+                            <div class="upcomingEvent__items--details">
+                                <i class=""></i>
+                                <p>salam</p>
+                                <i class=""></i>
+                                <p>salam</p>
+                            </div>
+                        </div>
+                        <a class="upcomingEvent__items--button text-decoration-none px-3 py-2" href="">detalis</a>
+                    </div>
+                    <div class="col upcomingEvent__items mx-2">
+                        <div class="upcomingEvent__items--container">
+                            <div class="upcomingEvent__items--container--skew">
+                                <div class="upcomingEvent__items--container--images">
+                                    <img src="<?php echo get_theme_file_uri('Images/unsplash_cEbHMacdrBg.jpg') ?>" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="upcomingEvent__items--content">
+                            <div class="upcomingEvent__items--title">
+                                <h6>title</h6>
+                            </div>
+                            <div class="upcomingEvent__items--text">
+                                <p>the code is correct and good
+                                    you must debug it after complete it
+                                </p>
+                            </div>
+                            <div class="upcomingEvent__items--details">
+                                <i class=""></i>
+                                <p>salam</p>
+                                <i class=""></i>
+                                <p>salam</p>
+                            </div>
+                        </div>
+                        <a class="upcomingEvent__items--button text-decoration-none px-3 py-2" href="">detalis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <div class="upcomingEvent__navigator--left">
+                    <a href=""><img src="<?php echo get_theme_file_uri('./Images/navigator2.png') ?>" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------- News & Article Section -------------------------------->
+    <section class="py-5 px-5 news">
+        <div class="row d-flex justify-content-center news__header align-items-center mb-5">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8 d-flex justify-content-between p-0">
+                <h6 class="text__underline">test</h6>
+                <a class="text-decoration-none px-3 py-2" href="">مشاهده همه</a>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between mt-5">
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <div class="news__navigator--right">
+                    <a href=""><img src="<?php echo get_theme_file_uri('./Images/navigator2.png') ?>" alt=""></a>
+                </div>
+            </div>
+            <div class="col-8 p-0">
+                <div class="row justify-content-between gx-2">
+                    <div class="col news__items mx-2">
+                        <div class="news__items--container">
+                            <div class="news__items--container--skew">
+                                <div class="news__items--container--images">
+                                    <img src="<?php echo get_theme_file_uri('Images/unsplash_cEbHMacdrBg.jpg') ?>" alt="">
+                                </div>
+                                <a href="">بزودی</a>
+                            </div>
+                        </div>
+                        <div class="news__items--content">
+                            <div class="news__items--content--title">
+                                <h6>title</h6>
+                            </div>
+                            <div class="news__items--content--text">
+                                <p>the code is correct and good
+                                    you must debug it after complete it
+                                </p>
+                            </div>
+                            <div class="news__items--content--details">
+                                <i class=""></i>
+                                <p>salam</p>
+                                <i class=""></i>
+                                <p>salam</p>
+                            </div>
+                        </div>
+                        <a class="news__items--button text-decoration-none px-3 py-2" href="">detalis</a>
+                    </div>
+                    <div class="col news__items mx-2">
+                        <div class="news__items--container">
+                            <div class="news__items--container--skew">
+                                <div class="news__items--container--images">
+                                    <img src="<?php echo get_theme_file_uri('Images/unsplash_cEbHMacdrBg.jpg') ?>" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__items--content">
+                            <div class="news__items--title">
+                                <h6>title</h6>
+                            </div>
+                            <div class="news__items--text">
+                                <p>the code is correct and good
+                                    you must debug it after complete it
+                                </p>
+                            </div>
+                            <div class="news__items--details">
+                                <i class=""></i>
+                                <p>salam</p>
+                                <i class=""></i>
+                                <p>salam</p>
+                            </div>
+                        </div>
+                        <a class="news__items--button text-decoration-none px-3 py-2" href="">detalis</a>
+                    </div>
+                    <div class="col news__items mx-2">
+                        <div class="news__items--container">
+                            <div class="news__items--container--skew">
+                                <div class="news__items--container--images">
+                                    <img src="<?php echo get_theme_file_uri('Images/unsplash_cEbHMacdrBg.jpg') ?>" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__items--content">
+                            <div class="news__items--title">
+                                <h6>title</h6>
+                            </div>
+                            <div class="news__items--text">
+                                <p>the code is correct and good
+                                    you must debug it after complete it
+                                </p>
+                            </div>
+                            <div class="news__items--details">
+                                <i class=""></i>
+                                <p>salam</p>
+                                <i class=""></i>
+                                <p>salam</p>
+                            </div>
+                        </div>
+                        <a class="news__items--button text-decoration-none px-3 py-2" href="">detalis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <div class="news__navigator--left">
+                    <a href=""><img src="<?php echo get_theme_file_uri('./Images/navigator2.png') ?>" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------- Footer Section -------------------------------->
+    <section class="footer">
+        <div class="row">
+            <div class="col-5">
+                <div class="footer__logo">
+                    <img src="<?php echo get_theme_file_uri('./Images/shiraz-fainal02 5.png') ?>" alt="">
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>Services</h5>
+                        <p>test1</p>
+                        <p>test1</p>
+                        <p>test1</p>
+                        <p>test1</p>
+                    </div>
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__rectangle">
+            <div class="footer__rectangle--small">
+            </div>
+            <div class="footer__rectangle--big">
+            </div>
+        </div>
+    </section>
 </div>
 
 <?php

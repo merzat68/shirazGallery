@@ -3,7 +3,6 @@ import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Import our custom CSS
 import "./css/main.scss";
-import "../style.css";
 import "./css/miscellaneous.scss";
 import "./css/sizes.scss";
 
@@ -12,3 +11,10 @@ import * as bootstrap from "bootstrap";
 
 // Import js files
 import "./js/tools";
+
+// import Swiper JS
+import Swiper from "swiper/bundle";
+// import Swiper styles
+import "swiper/css";
+
+const swiper = new Swiper();
