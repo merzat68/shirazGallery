@@ -1,4 +1,5 @@
 @import "../../style.css";
+@import "./swiper-bundle.min.css";
 
 .header__main--style {
   background: #fafafa;
@@ -8,23 +9,66 @@
   border: 1px solid #413c7e;
   border-radius: 4px;
 }
-.slider__section {
+.postSlider {
   padding-bottom: 8rem;
+  &__post {
+    &--caption {
+      background: linear-gradient(
+        142.76deg,
+        rgba(176, 67, 135, 0.8) 17.88%,
+        #413c7e 94.87%
+      );
+      padding: 14rem 5rem;
+      border-radius: calc(56 / 16) * 1rem;
+      transform: skewX(-10deg);
+    }
+    // &--thumbnail {
+    //   background-color: #413c7e;
+    //   border-radius: 4.5rem;
+    //   margin-right: 2rem;
+    //   margin-top: -15rem;
+    //   margin-left: -5rem;
+    //   overflow: hidden;
+    //   transform: skew(-15deg, 15deg);
+    //   img {
+    //     transform: skew(15deg, -15deg);
+    //   }
+    //   padding: 2rem;
+    // }
+  }
+  &__navigator {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 0rem;
+    position: absolute;
+    right: 20.4rem;
+    bottom: 3.3rem;
+    &--right,
+    &--left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.5s ease-out;
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &--right {
+      margin-left: 1rem;
+    }
+    &--left {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__markdown {
+  }
 }
 .news__figure--cards {
-  .thumbnail {
-    background-color: #413c7e;
-    border-radius: 4.5rem;
-    margin-right: 2rem;
-    margin-top: -15rem;
-    margin-left: -5rem;
-    overflow: hidden;
-    transform: skew(-15deg, 15deg);
-    img {
-      transform: skew(15deg, -15deg);
-    }
-    padding: 2rem;
-  }
   .rects {
     position: absolute;
     bottom: 29rem;
@@ -60,73 +104,6 @@
     }
   }
 
-  .caption {
-    background: linear-gradient(
-      142.76deg,
-      rgba(176, 67, 135, 0.8) 17.88%,
-      #413c7e 94.87%
-    );
-    border-radius: 56px;
-    transform: skewX(-15deg);
-    margin-top: -5rem;
-    margin-right: -15rem;
-    figcaption {
-      margin-top: 14rem;
-      margin-right: 20rem;
-      padding: 6rem;
-      transform: skewX(15deg);
-      .register {
-        background: #f0f2f5;
-        border-radius: 4px;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-        margin-right: 6rem;
-        margin-top: 0rem;
-        color: #413c7e;
-        text-decoration: none;
-      }
-      p {
-        margin-right: -1rem;
-        margin-bottom: 7rem;
-      }
-      p,
-      h5 {
-        color: #ffffff;
-        a {
-          color: #ffffff;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-  .navigator {
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-    padding: 0rem;
-    position: absolute;
-    right: 20.4rem;
-    bottom: 3.3rem;
-    transform: skewX(15deg);
-    .right,
-    .left {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.5s ease-out;
-      opacity: 0.6;
-      &:hover {
-        opacity: 1;
-      }
-    }
-    .right {
-      margin-left: 1rem;
-    }
-    .left {
-      img {
-        transform: rotate(180deg);
-      }
-    }
-  }
   .markdown {
     margin-top: -6rem;
     background: rgba(65, 60, 126, 0.35);
@@ -144,7 +121,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 3rem;
+    padding: 2rem 1rem 1rem;
     &:hover {
       background: linear-gradient(
         116.13deg,
@@ -247,6 +224,7 @@
 }
 
 .pastCourse {
+  padding-bottom: 8rem;
   background: linear-gradient(
       180deg,
       #efefef 3.82%,
@@ -326,6 +304,13 @@
 
 .upcomingEvent {
   position: relative;
+  &__bg {
+    svg {
+      position: absolute;
+      top: -2.5rem;
+      right: 0;
+    }
+  }
   &__header {
     a {
       background: #413c7e;
@@ -363,11 +348,11 @@
         transition: all 0.5s ease;
       }
       &--images {
-        transform: skewY(8deg) translateY(-1rem);
+        transform: skewY(8deg) translateY(-2rem);
         border-radius: 1rem;
         overflow: hidden;
         img {
-          border-radius: 0px 16px 16px 0px;
+          transform: scale(1.1);
         }
       }
       a {
@@ -424,6 +409,7 @@
 }
 
 .news {
+  padding-bottom: 8rem;
   background: linear-gradient(
       180deg,
       #efefef 3.58%,
@@ -526,10 +512,16 @@
 }
 
 .footer {
-  overflow: hidden;
   position: relative;
+  &__bg {
+    svg {
+      position: absolute;
+      top: -2.5rem;
+      right: 0;
+    }
+  }
   &__logo {
-    padding: 8rem 10rem 5rem 5rem;
+    padding: 8rem 10rem 3rem 5rem;
   }
   &__rectangle {
     position: absolute;
@@ -541,6 +533,9 @@
       border-radius: calc(32 / 16) * 1rem;
       transform: rotate(80.55deg);
       padding: 12rem;
+      position: absolute;
+      bottom: 1rem;
+      right: 0rem;
     }
     &--small {
       position: absolute;
@@ -553,4 +548,36 @@
       transform: rotate(138.93deg);
     }
   }
+  &__nav {
+    h5 {
+      color: #413c7e;
+    }
+    p {
+      color: #0b0b0b;
+    }
+  }
+  &__social {
+    h5 {
+      color: #413c7e;
+    }
+    p {
+      color: #0b0b0b;
+    }
+  }
+  &__copyright {
+    color: #413c7e;
+    padding-top: 1rem;
+    border-image: linear-gradient(
+        to left,
+        rgba(107, 103, 154, 0) 10%,
+        rgba(107, 103, 154, 0.4) 50%,
+        rgba(107, 103, 154, 0) 90%
+      )
+      100% 0 0 0/0.2rem 0 0 0 stretch;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 15rem;
 }

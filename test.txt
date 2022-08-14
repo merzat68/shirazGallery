@@ -1,0 +1,26 @@
+<!-- <div class="col-7">
+            <?php if (get_the_post_thumbnail()) { ?>
+                <div class="postSlider__post--thumbnail">
+                    <img src="<?php echo the_post_thumbnail_url(); ?>" alt="sample74" />
+                </div>
+            <?php } ?>
+        </div> -->
+        <div class="rects">
+            <div class="rects--big">
+            </div>
+            <div class="rects--middle">
+            </div>
+            <div class="rects--small">
+            </div>
+        </div>
+        <div class="postSlider__navigator">
+            <div class="postSlider__navigator--right">
+                <a href=""><img src="<?php echo get_theme_file_uri('./Images/navigator.png') ?>" alt=""></a>
+            </div>
+            <div class="postSlider__navigator--left">
+                <a href=""><img src="<?php echo get_theme_file_uri('./Images/navigator.png') ?>" alt=""></a>
+            </div>
+        </div>
+        <div class="postSlider__markdown">
+
+        </div>

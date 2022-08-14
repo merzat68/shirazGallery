@@ -5,9 +5,9 @@ include get_template_directory() . '/jdf.php';
 function shiraz_files()
 {
     wp_enqueue_style('font-awesome', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css');
-    wp_enqueue_style('shiraz_main_style', get_theme_file_uri('./build/style-index.css'));
-    wp_enqueue_style('shiraz_main_extra_style', get_theme_file_uri('./build/index.css'));
-    wp_enqueue_script('main-shiraz-js', get_theme_file_uri('./build/index.js'), NULL, '1.0', true);
+    wp_enqueue_style('shiraz_main_style', get_theme_file_uri('/build/style-index.css'));
+    wp_enqueue_style('shiraz_main_extra_style', get_theme_file_uri('/build/index.css'));
+    wp_enqueue_script('main-shiraz-js', get_theme_file_uri('/build/index.js'), NULL, '1.0', true);
 
     wp_localize_script('main-shiraz-js', 'shirazData', array(
         'root_url' => get_site_url(),
