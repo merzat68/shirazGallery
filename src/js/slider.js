@@ -1,6 +1,6 @@
 import Swiper from "./swiper-bundle.min";
 
-const swiper = new Swiper(".postSlider", {
+const swiper = new Swiper(".postSlider__caption--container", {
   loop: true,
   effect: "fade",
   fadeEffect: {
@@ -8,7 +8,7 @@ const swiper = new Swiper(".postSlider", {
   },
   // If we need pagination
   pagination: {
-    el: ".postSlider__markdown",
+    el: ".postSlider__markdown--container",
   },
 
   // Navigation arrows
@@ -21,4 +21,15 @@ const swiper = new Swiper(".postSlider", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+});
+const swiper__thumbnail = new Swiper(".postSlider__thumbnail--container", {
+  loop: true,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+});
+
+swiper.on("slideChange", () => {
+  swiper__thumbnail.slideNext();
 });

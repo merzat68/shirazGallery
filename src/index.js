@@ -12,3 +12,4 @@ import * as bootstrap from "bootstrap";
 // Import js files
 import "./js/tools";
 import "./js/slider";
+import "./js/pastCourseSlider";
