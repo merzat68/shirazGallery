@@ -274,6 +274,9 @@
   }
 }
 
+/* 
+Outdated Courses Style
+*/
 .pastCourse {
   padding-bottom: 8rem;
   background: linear-gradient(
@@ -283,12 +286,18 @@
     ),
     linear-gradient(97.91deg, #b04387 5.35%, rgba(65, 60, 126, 0.77) 87.74%);
   position: relative;
+  /* 
+header style
+*/
   &__header {
     a {
       background: #413c7e;
       border-radius: 4px;
     }
   }
+  /* 
+slider main style
+*/
   &__slider {
     overflow: hidden;
     &--images {
@@ -345,6 +354,9 @@
       }
     }
   }
+  /* 
+navigation button style
+*/
   &__navigator {
     display: flex;
     justify-content: space-between;
@@ -372,6 +384,9 @@
       }
     }
   }
+  /* 
+seperator style
+*/
   svg {
     position: absolute;
     right: 0;
@@ -429,10 +444,12 @@
         transition: all 0.5s ease;
       }
       &--images {
-        transform: skewY(8deg) translateY(-1rem);
+        transform: skewY(8deg) translateY(-3rem);
         border-radius: 1rem;
         overflow: hidden;
         img {
+          width: 100%;
+          transform: skewY(-8deg) translateY(3rem);
           border-radius: 0px 16px 16px 0px;
         }
       }

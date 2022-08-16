@@ -79,7 +79,6 @@ function noSubsAdminBar()
         show_admin_bar(false);
     }
 }
-// Our custom post type function
 function posttypes()
 {
     // Set UI labels for Custom Post Type
@@ -139,5 +138,17 @@ function posttypes()
         ),
     );
 }
-// Hooking up our function to theme setup
 add_action('init', 'posttypes');
+
+
+add_action('admin_menu', 'shirazThemeOption');
+
+function shirazThemeOption()
+{
+    add_menu_page('theme_option', "Theme Options", "manage_options", "theme_option", "custom_options");
+}
+
+function custom_options()
+{
+    echo "Custom Options";
+}
