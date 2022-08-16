@@ -1,9 +1,12 @@
 <?php
+
 include get_template_directory() . './inc/functions/custom-db-query.php';
 include get_template_directory() . './inc/functions/custom-post-types.php';
 include get_template_directory() . './inc/shiraz-theme-option.php';
 include get_template_directory() . '/jdf.php';
 //include get_template_directory() . '/inc/search-route.php';
+
+if (!defined('ABSPATH')) exit;
 
 add_action('wp_enqueue_scripts', 'shiraz_files');
 
@@ -29,8 +32,7 @@ function shiraz_features()
     register_nav_menu('headerMenu', 'Header Menu');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_image_size('professorImage', 400, 260, false);
-    add_image_size('smallImage', 150, 150, false);
+    add_image_size('PG-icon', 37, 48, true);
 }
 
 

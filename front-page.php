@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<div class="section__style px-0 m-0">
+<div class="section__style px-0 m-0 overflow-hidden">
 
     <!-------------------------------- Slider Section -------------------------------->
     <section class="position-relative">
@@ -105,21 +105,21 @@ get_header();
                 <div class="row">
                     <div class="col-3">
                         <div class="block mt-8">
-                            <img src="<?php echo get_theme_file_uri('Images/Vector3.svg') ?>" alt="">
+                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-ru')), 'PG-icon')[0] ?>" alt="">
                             <h6>ساخت فیلم</h6>
                         </div>
                         <div class="block mt-4">
-                            <img src="<?php echo get_theme_file_uri('Images/Vector3.svg') ?>" alt="">
+                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-rd')), 'PG-icon')[0] ?>" alt="">
                             <h6>ساخت فیلم</h6>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="block">
-                            <img src="<?php echo get_theme_file_uri('Images/Vector3.svg') ?>" alt="">
+                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-lu')), 'PG-icon')[0] ?>" alt="">
                             <h6>ساخت فیلم</h6>
                         </div>
                         <div class="block mt-4">
-                            <img src="<?php echo get_theme_file_uri('Images/Vector3.svg') ?>" alt="">
+                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-ld')), 'PG-icon')[0] ?>" alt="">
                             <h6>ساخت فیلم</h6>
                         </div>
                     </div>
