@@ -144,11 +144,13 @@ get_header();
             <div class="col-8">
                 <div class="row">
                     <div class="col-6">
-                        <div class="bg__talent"></div>
+                        <div class="bg__talent">
+                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_talent_image')), 'medium')[0] ?>" alt="">
+                        </div>
                     </div>
                     <div class="col-6 position-relative pe-5">
-                        <h6 class="text__underline">test</h6>
-                        <p class="mt-4 mb-6">این پست آزمایشی است</p>
+                        <h6 class="text__underline"><?php echo esc_attr(shiraz_get_option('shiraz_talent_title')) ?></h6>
+                        <p class="mt-4 mb-6"><?php echo esc_attr(shiraz_get_option('shiraz_talent_caption')) ?></p>
 
                         <a class="talent__button text-white text-decoration-none px-5 py-2" href="">مطالعه بیشتر</a>
 
