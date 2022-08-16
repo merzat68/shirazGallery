@@ -17,9 +17,4 @@ const swiper = new Swiper(".pastCourse__slider", {
     nextEl: ".pastCourse__navigator--right",
     prevEl: ".pastCourse__navigator--left",
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
 });

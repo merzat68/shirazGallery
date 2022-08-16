@@ -1,15 +1,5 @@
 <!-------------------------------- Footer Section -------------------------------->
 <section class="footer">
-    <div class="footer__bg">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1440 48.2" xml:space="preserve">
-            <style type="text/css">
-                .st0 {
-                    fill: #EFEFEF;
-                }
-            </style>
-            <path class="st0" d="M726,33.6C445,33,0,0.4,0,0.4v48.2h1440V0.4C1440,0.4,1012.4,34.2,726,33.6z" />
-        </svg>
-    </div>
     <div class="row  overflow-hidden position-relative">
         <div class="col">
             <div class="row">

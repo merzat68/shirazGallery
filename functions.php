@@ -1,4 +1,5 @@
 <?php
+include get_template_directory() . './inc/custom-functions.php';
 include get_template_directory() . '/jdf.php';
 //include get_template_directory() . '/inc/search-route.php';
 
@@ -137,18 +138,98 @@ function posttypes()
             'menu_icon' => 'dashicons-welcome-learn-more'
         ),
     );
+
+    $eventLabels = array(
+        'name'                => 'Event',
+        'singular_name'       => 'Event',
+        'menu_name'           => 'Event',
+        'parent_item_colon'   => 'Parent Event',
+        'all_items'           => 'All Event',
+        'view_item'           => 'View Event',
+        'add_new_item'        => 'Add New Event',
+        'add_new'             => 'Add New',
+        'edit_item'           => 'Edit Event',
+        'update_item'         => 'Update Event',
+        'search_items'        => 'Search Event',
+        'not_found'           => 'Not Found',
+        'not_found_in_trash'  => 'Not found in Trash',
+    );
+
+    register_post_type(
+        'event',
+        // CPT Options
+        array(
+            'labels' => $eventLabels,
+            'supports' => array('title', 'excerpt', 'custom-fields'),
+            'public' => true,
+            'label' => 'event',
+            'menu_icon' => 'dashicons-calendar'
+        ),
+    );
 }
 add_action('init', 'posttypes');
 
 
-add_action('admin_menu', 'shirazThemeOption');
+add_action("after_switch_theme", "shirazCustomDB");
 
-function shirazThemeOption()
+function shirazCustomDB()
 {
-    add_menu_page('theme_option', "Theme Options", "manage_options", "theme_option", "custom_options");
+    global $wpdb;
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+
+    $table_name = $wpdb->prefix . "shirazGallery";  //get the database table prefix to create my new table
+
+    $sql = "CREATE TABLE $table_name (
+      options_id int(10) unsigned NOT NULL AUTO_INCREMENT,
+      options_name varchar(255) NOT NULL,
+      options_value varchar(255) NOT NULL,
+      PRIMARY KEY  (options_id),
+      KEY Index_2 (options_name),
+      KEY Index_3 (options_value)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
+    dbDelta($sql);
 }
 
-function custom_options()
+
+
+add_action('admin_menu', 'shiraz_admin_page');
+
+function shiraz_admin_page()
 {
-    echo "Custom Options";
+    add_menu_page('Theme Options', 'Shiraz Gallery', 'manage_options', 'shiraz_options', 'shiraz_theme_create_page');
+
+    add_submenu_page('shiraz_options', 'Program & Goals Settings', 'Program & Goals', 'manage_options', "PG-settings", 'shiraz_theme_create_page');
+
+    add_action('admin_init', 'Shiraz_custom_setting');
+}
+
+function Shiraz_custom_setting()
+{
+    register_setting('shiraz-settings-group', 'shiraz_gallery_title');
+    register_setting('shiraz-settings-group', 'shiraz_gallery_caption');
+    add_settings_section('shiraz-gp-options', 'Program & Goals Section Settings', 'programsGoalsOptions', 'shiraz_options');
+    add_settings_field('shiraz-gp-title', 'Program & Goals Title', 'programGoalTitle', 'shiraz_options', 'shiraz-gp-options');
+    add_settings_field('shiraz-gp-caption', 'Program & Goals Caption', 'programGoalCaption', 'shiraz_options', 'shiraz-gp-options');
+}
+
+function programsGoalsOptions()
+{
+}
+
+function programGoalTitle()
+{
+    $shirazPGTitle = esc_attr(shiraz_get_option('shiraz_gallery_title'));
+    echo "<input type='text' name='title' id='title' value='{$shirazPGTitle}' placeholder='title'/>";
+}
+function programGoalCaption()
+{
+    $shirazPGCaption = esc_attr(shiraz_get_option('shiraz_gallery_caption'));
+    echo "<textarea rows='5' cols='80' name='caption'>" . $shirazPGCaption . "</textarea>";
+}
+
+function shiraz_theme_create_page()
+{
+    require_once(get_template_directory() . '/inc/templates/shriaz-admin.php');
 }

@@ -13,3 +13,5 @@ import * as bootstrap from "bootstrap";
 import "./js/tools";
 import "./js/slider";
 import "./js/pastCourseSlider";
+import "./js/eventSlider";
+import "./js/newsSlider";
