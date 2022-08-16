@@ -12,7 +12,11 @@ function shiraz_get_option($optionName)
 
     $wpdb->flush();
 
-    return $value[0]->options_value;
+    if (empty($value)) {
+        return 'گالری شیراز';
+    } else {
+        return $value[0]->options_value;
+    }
 }
 
 function shiraz_update_option($optionName, $optionValue)
