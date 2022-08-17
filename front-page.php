@@ -105,27 +105,49 @@ get_header();
                 <div class="row">
                     <div class="col-3">
                         <div class="block mt-8">
-                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-ru')), 'PG-icon')[0] ?>" alt="">
-                            <h6>ساخت فیلم</h6>
+                            <img src="<?php
+                                        echo empty(shiraz_get_option('shiraz_gallery_image-ru')) ? '' : wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-ru')), 'PG-icon')[0];
+                                        ?>" alt="">
+                            <h6><?php
+                                echo empty(shiraz_get_option('shiraz_gallery_text-ru')) ? 'ساخت مستند' : esc_html(shiraz_get_option('shiraz_gallery_text-ru'))
+                                ?></h6>
                         </div>
                         <div class="block mt-4">
-                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-rd')), 'PG-icon')[0] ?>" alt="">
-                            <h6>ساخت فیلم</h6>
+                            <img src="<?php
+                                        echo empty(shiraz_get_option('shiraz_gallery_image-rd')) ? '' : wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-rd')), 'PG-icon')[0];
+                                        ?>" alt="">
+                            <h6><?php
+                                echo empty(shiraz_get_option('shiraz_gallery_text-rd')) ? 'ساخت مستند' : esc_html(shiraz_get_option('shiraz_gallery_text-rd'))
+                                ?></h6>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="block">
-                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-lu')), 'PG-icon')[0] ?>" alt="">
-                            <h6>ساخت فیلم</h6>
+                            <img src="<?php
+                                        echo empty(shiraz_get_option('shiraz_gallery_image-lu')) ? '' : wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-lu')), 'PG-icon')[0];
+                                        ?>" alt="">
+                            <h6><?php
+                                echo empty(shiraz_get_option('shiraz_gallery_text-lu')) ? 'ساخت مستند' : esc_html(shiraz_get_option('shiraz_gallery_text-lu'))
+                                ?></h6>
                         </div>
                         <div class="block mt-4">
-                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-ld')), 'PG-icon')[0] ?>" alt="">
-                            <h6>ساخت فیلم</h6>
+                            <img src="<?php
+                                        echo empty(shiraz_get_option('shiraz_gallery_image-ld')) ? '' : wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_gallery_image-ld')), 'PG-icon')[0];
+                                        ?>" alt="">
+                            <h6><?php
+                                echo empty(shiraz_get_option('shiraz_gallery_text-ld')) ? 'ساخت مستند' : esc_html(shiraz_get_option('shiraz_gallery_text-ld'))
+                                ?></h6>
                         </div>
                     </div>
                     <div class="col">
-                        <h6 class="text__underline"><?php echo esc_attr(shiraz_get_option('shiraz_gallery_title')) ?></h6>
-                        <p class="mt-3"><?php echo esc_attr(shiraz_get_option('shiraz_gallery_caption')) ?></p>
+                        <h6 class="text__underline"><?php
+                                                    echo empty(shiraz_get_option('shiraz_gallery_title')) ? 'اهداف و برنامه های رویداد' : esc_attr(shiraz_get_option('shiraz_gallery_title'));
+                                                    ?>
+                        </h6>
+                        <p class="mt-3"><?php
+                                        echo empty(shiraz_get_option('shiraz_gallery_caption')) ? 'متن آماده' : esc_attr(shiraz_get_option('shiraz_gallery_caption'));
+                                        ?>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -145,12 +167,18 @@ get_header();
                 <div class="row">
                     <div class="col-6">
                         <div class="bg__talent">
-                            <img src="<?php echo wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_talent_image')), 'medium')[0] ?>" alt="">
+                            <img src="<?php
+                                        echo empty(shiraz_get_option('shiraz_talent_image')) ? '' : wp_get_attachment_image_src(esc_attr(shiraz_get_option('shiraz_talent_image')), 'medium')[0];
+                                        ?>" alt="">
                         </div>
                     </div>
                     <div class="col-6 position-relative pe-5">
-                        <h6 class="text__underline"><?php echo esc_attr(shiraz_get_option('shiraz_talent_title')) ?></h6>
-                        <p class="mt-4 mb-6"><?php echo esc_attr(shiraz_get_option('shiraz_talent_caption')) ?></p>
+                        <h6 class="text__underline"><?php
+                                                    echo empty(shiraz_get_option('shiraz_talent_title')) ? 'شیراز تلنت' :  esc_attr(shiraz_get_option('shiraz_talent_title'));
+                                                    ?></h6>
+                        <p class="mt-4 mb-6"><?php
+                                                echo empty(shiraz_get_option('shiraz_talent_caption')) ? 'شیراز تلنت' : esc_attr(shiraz_get_option('shiraz_talent_caption'));
+                                                ?></p>
 
                         <a class="talent__button text-white text-decoration-none px-5 py-2" href="">مطالعه بیشتر</a>
 
@@ -390,7 +418,6 @@ get_header();
             <path class="st0" d="M726,33.6C445,33,0,0.4,0,0.4v48.2h1440V0.4C1440,0.4,1012.4,34.2,726,33.6z" />
         </svg>
     </section>
-
 
 </div>
 <?php
